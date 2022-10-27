@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+/* Section Start*/
+
+.start {
+    background: linear-gradient(rgba(40, 40, 44, 0.9), rgba(40, 40, 44, 0.9)), url(../assets/img/fondo1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.principal_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.content_box {
+    width: 60%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box__left {
+    width: 80%;
+    height: 80%;
+    max-width: 590px;
+    max-height: 720px;
+    background: url(../assets/img/aironman.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 100;
+    position: absolute;
+    left: -200px;
+}
+
+.box__right {
+    width: 100%;
+    min-width: 900px;
+    min-height: 700px;
+    background: linear-gradient(rgba(243, 241, 241, 0.6), rgba(253, 251, 251, 0.4));
+    backdrop-filter: blur( 3px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur( 3px);
+    border-radius: 10px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.h1_box_right {
+    font-size: 4rem;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.p_box_right {
+    font-size: 2rem;
+    color: black;
+}
+
+.btn_box_right {
+    background-color: rgba( 237, 28, 36, 1);
+    font-size: 1rem;
+    padding: 20px 70px 20px 70px;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    margin-top: 40px;
+}
+
+.logo_box_right {
+    background-image: url(./img/lobo_box_right.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 150px;
+}
+
+
+/* Header and Navbar */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba( 237, 28, 36, 1);
+    position: fixed;
+    gap: 160px;
+    width: 100%;
+    height: 90px;
+    z-index: 9999;
+    top: 0;
+}
+
+.img_logo {
+    height: 58px;
+    width: 180px;
+}
+
+.navbar {
+    display: flex;
+    gap: 60px;
+    font-size: 1.6rem;
+}
+
+.navbar a {
+    color: white;
+}
+
+.login a {
+    color: white;
+}
+
+.login {
+    color: white;
+    display: flex;
+    gap: 40px;
+    font-size: 1.6rem;
+}
+
+
+/* OPTION CONTENT */
+
+.option_content {
+    width: 100%;
+    height: 2800px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box_option {
+    margin-top: 2px;
+    background-color: white;
+    height: 20%;
+    width: 100%;
+    display: flex;
+}
+
+
+/* OPTION CHARACTER */
+
+.option_character {
+    background: linear-gradient(rgba(14, 14, 15, 0.8), rgba(14, 14, 15, 0.8)), url(../assets/img/option-character.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.heroe {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.h1_option_box {
+    color: white;
+    font-size: 5rem;
+}
+
+.btn_option_box {
+    background-color: white;
+    font-size: 1rem;
+    padding: 10px 50px 10px 50px;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.btn_search_left {
+    background: linear-gradient(rgba(191, 191, 194, 0.7), rgba(191, 191, 194, 0.7));
+    font-size: 1rem;
+    padding: 50px 10px 50px 10px;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.character_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option_series {
+    background: linear-gradient(rgba(14, 14, 15, 0.8), rgba(14, 14, 15, 0.8)), url(../assets/img/option-serie.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.img {
+    width: 100%;
+    height: 1800px;
+    background: linear-gradient(rgba(235, 90, 90, 0.8), rgba(33, 16, 16, 0.8)), url(./img/444211.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
