@@ -6,28 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./styles2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Marvel SuperHero</title>
 </head>
 
 <body>
 
-    <section class="start">
+    <section class="start" id="start">
+        <button class="hamburger">
+            <div class="bar">hola</div>
+       </button>
         <div class="header">
             <div class="logo">
                 <img src="./assets/img/logomarvel3.png" alt="" class="img_logo">
             </div>
             <nav class="navbar">
-                <a href="#">HOME</a>
-                <a href="#">CHARACTERS</a>
-                <a href="#">SERIES</a>
-                <a href="#">VIDEOS</a>
-                <a href="#">COMICS</a>
+                <a href="#start">HOME</a>
+                <a href="#shooop">SHOOP</a>
+                <a href="#tittle_shoop">CHARACTERS</a>
+                <a href="#tittle_shoop">SERIES</a>
                 <a href="#">CONTACT</a>
             </nav>
-            <div class="login">
-                <a href="#">log in</a>
-                <a href="#">Create</a>
+            <div class="cart_container">
+                <img class="img_carrito" src="./assets/img/cart.png" alt="carrito icono">
+                <div class="counter_cart">0</div>
             </div>
+            <div class="login">
+                <a href="./login.html" id="login_in"><span>log in</span></a>
+                <a href="#" id="login_out">log out</a>
+            </div>
+            <!--Carrito menu abierto hay que sacar por JS la clase open_cart para ocultar y abrir el carrito-->
+            <div class="cart hidden">
+                <div class="close_cart">
+                    <button class="btn btn_close">X</button>
+                </div>
+                
+                <h1>MARVEL CART</h1>
+                <div class="cart-container" id="sell_cart"></div>
+
+                <span class="divider"></span>
+
+                <div class="cart_total">
+                    <span class = "precio_total" id="price_total">$0</span>
+                </div>
+                <div class="btn_container_cart">
+                    <button class="btn_buy_item">BUY</button>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+            <!---------->
         </div>
         <div class="principal_content">
             <div class="content_box">
@@ -37,48 +66,87 @@
                     <h1 class="h1_box_right">Wellcome to the marvel universe</h1>
                     <p class="p_box_right">It is the bigest shop to find and buy every thing </p>
                     <p class="p_box_right">about your favorites marvel heroes</p>
-                    <button class="btn_box_right">Start Now</button>
+                    <a href="#Shoop" class="btn_box_right">Start Now</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="option_content">
+    <div class="tittle_shoop" id="tittle_shoop">
+        <h1>MARVEL SEARCH</h1>
+    </div>
+    <section class="option_content" id="option_content">
         <div class="box_option option_character">
-            <button class="btn_search_left"><</button>
-            <div class="character_box">
-                <h1 class="h1_option_box">Marvel characters</h1>
-                <div class="heroe"></div>
-                <button class="btn_option_box">Search</button>
-                <input type="text" placeholder="Search heroe" id="heroe_value">
+            <div class="sub_box_character hide" id="sub_box_character">
+                <button class="material-icons md-dark btn_search_left disabled" id="ant_character">arrow_back_ios</button>
+                <div class="character_box ">
+                    <h1 class="h1_option_box ">Marvel characters</h1>
+                    <div class="character" id="character">
+                    </div>
+                    <input type="text " placeholder="Search heroe" id="heroe_value" class="search_character">
+                    <button class="btn_option_box">Search</button>
+
+                </div>
+
+                <button class="material-icons btn_search_left disabled" id="next_character">arrow_forward_ios</button>
             </div>
-            <button class="btn_search_left">></button>
+            <div class="character_comics hide" id="character_comics"></div>
+
+
         </div>
+
+        <div class="relleno"></div>
+
+
 
         <div class="box_option option_series">
-            <button class="btn_search_left"><</button>
-            <div class="character_box">
-                <h1 class="h1_option_box">Marvel series</h1>
-                <button class="btn_option_box">Search</button>
+            <div class="sub_box_character hide" id="sub_box_series">
+                <button class="material-icons md-dark btn_search_left disabled" id="ant_serie">arrow_back_ios</button>
+                <div class="character_box ">
+                    <h1 class="h1_option_box ">Marvel Series</h1>
+                    <div class="character" id="series">
+                    </div>
+                    <input type="text " placeholder="Search serie" id="serie_value" class="search_character">
+                    <button class="btn_option_box" id="btn_search_serie">Search</button>
 
+                </div>
+
+                <button class="material-icons btn_search_left disabled" id="next_serie">arrow_forward_ios</button>
             </div>
-            <button class="btn_search_left">></button>
+            <div class="character_comics hide" id="comics_series"></div>
+
+
         </div>
-        <div class="box_option"></div>
-        <div class="box_option"></div>
-    </section>
-
-
-
-
-    <section class="img">
 
     </section>
+    <section id="shooop">
+    <div class="tittle_shoop" id="Shoop">
+        <h1>COMICS SHOOP</h1>
+    </div>
+    
+    <section class="img " id="shooping">
+        <a href="#Shoopcart">
+         <div class="shoop_container" id="shoop_container"></div>
+        </a>
+
+        <button class= "see_more" id="more">MORE</button> 
+    </section>
+   
+
+    <div class="hide" id="Shoopcart">
+        <h1>MARVEL CART</h1>
+    </div>
+
+    <div class="show_item_shoop" id="show_item_shoop"></div>
+
+</section>
+
+    <div class="footer">
+       
+    </div>
 
 
-
-    <script src="./assets/request.js"></script>
-    <script src="./assets/main.js"></script>
+    <script src="./assets/request.js "></script>
+    <script src="./assets/main.js "></script>
 </body>
 
 </html>
