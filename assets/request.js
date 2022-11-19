@@ -4,7 +4,7 @@
 const requestCharacter = async(character) => {
 
     const baseURL =
-        `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
+        `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
     const response = await fetch(baseURL);
     const info = await response.json();
 
@@ -14,7 +14,7 @@ const requestCharacter = async(character) => {
 const requestSeries = async(character) => {
 
     const baseURL =
-        `http://gateway.marvel.com/v1/public/series?titleStartsWith=${character}&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
+        `https://gateway.marvel.com/v1/public/series?titleStartsWith=${character}&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
     const response = await fetch(baseURL);
     const info = await response.json();
     console.log(info)
@@ -24,11 +24,11 @@ const requestSeries = async(character) => {
 const requestComicsShoop = async() => {
 
     const baseURL =
-        `http://gateway.marvel.com/v1/public/comics?format=digital%20comic&limit=100&offset=33&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
+        `https://gateway.marvel.com/v1/public/comics?format=digital%20comic&limit=100&offset=33&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
     const response = await fetch(baseURL);
     const info = await response.json();
     const baseURL2 =
-        `http://gateway.marvel.com/v1/public/comics?format=digital%20comic&limit=100&offset=130&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
+        `https://gateway.marvel.com/v1/public/comics?format=digital%20comic&limit=100&offset=130&ts=1&apikey=41b24ea98e45ba3ef80d26f39bf2e510&hash=db0b049a5ee957a225cacedc6e478190`;
         const response2 = await fetch(baseURL2);
         const info2 = await response2.json();
     datax = info.data.results.filter(comic => comic.images.length !== 0)
