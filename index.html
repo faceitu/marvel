@@ -13,20 +13,30 @@
 
 <body>
 
-    <section class="start" id="start">
-        <button class="hamburger">
-            <div class="bar">hola</div>
-       </button>
-        <div class="header">
-            <div class="logo">
-                <img src="./assets/img/logomarvel3.png" alt="" class="img_logo">
-            </div>
-            <nav class="navbar">
+    <section class="start" id="start"> 
+        <div class="hamburguesa" id="hamburguesa">
+            <nav class="navbar_hambur" id="navbar">
                 <a href="#start">HOME</a>
                 <a href="#shooop">SHOOP</a>
                 <a href="#tittle_shoop">CHARACTERS</a>
                 <a href="#tittle_shoop">SERIES</a>
-                <a href="#">CONTACT</a>
+                <a href="#footer">CONTACT</a>
+            </nav>
+        </div>
+        <div class="header">
+            <div class="btnhambur" id="btnhambur">
+                <div class="btn_hambur" id="btn_spider"></div>
+            </div>
+            <div class="logo">
+                <img src="./assets/img/logomarvel3.png" alt="" class="img_logo">
+            </div>
+           
+            <nav class="navbar" id="navbar">
+                <a href="#start">HOME</a>
+                <a href="#shooop">SHOOP</a>
+                <a href="#tittle_shoop">CHARACTERS</a>
+                <a href="#tittle_shoop">SERIES</a>
+                <a href="#footer">CONTACT</a>
             </nav>
             <div class="cart_container">
                 <img class="img_carrito" src="./assets/img/cart.png" alt="carrito icono">
@@ -122,14 +132,15 @@
     <div class="tittle_shoop" id="Shoop">
         <h1>COMICS SHOOP</h1>
     </div>
-    
+    <a href="#Shoopcart">
     <section class="img " id="shooping">
-        <a href="#Shoopcart">
+        
          <div class="shoop_container" id="shoop_container"></div>
-        </a>
+       
 
         <button class= "see_more" id="more">MORE</button> 
     </section>
+    </a>
    
 
     <div class="hide" id="Shoopcart">
@@ -140,10 +151,33 @@
 
 </section>
 
-    <div class="footer">
-       
-    </div>
+<div class="tittle_shoop2" id="Shoop"></div>
 
+<section  id="footer">
+
+    <div class="footer">
+            <div class="logo_footer">
+                    <img src="./assets/img/logo_footer.png" alt="">
+            </div>
+            <div class="info_footer">
+                <span>ABOUT MARVEL</span>
+                <span>HELP/FAQ</span> 
+                <span>CARRERS</span>
+                <span>INTERNSHIPS</span>
+            </div>
+            <div class="info_footer">
+                <span>ADVERTISING</span>
+                <span>DISNEY+</span> 
+                <span>MARVELHQ.COM</span>
+                <span>REDEEM DIGITAL</span>
+            </div>
+            <div class="info_footer">
+                <span>MARVEL DIGITAL</span>
+                <span>MARVEL UNLIMITED</span> 
+                <span>FOLOW MARVECONTACT US</span>
+            </div>
+        </div>
+</section>
 
     <script src="./assets/request.js "></script>
     <script src="./assets/main.js "></script>

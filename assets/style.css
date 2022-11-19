@@ -580,15 +580,83 @@ height: 500px;
   
 }
 
+.footer {
+  background-color: #151515;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
 
+}
+.info_footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    color: white;
+}
 
+.tittle_shoop2 {
+    height: 100px;
+}
 /* --------- HOVERS --------------- */
 
 .img_character_comics:hover {
     border: 1px white solid;
+   
 }
 
 
+/* ----menu hamburguesa-------- */
+
+.btn_hambur {
+    background-image: url(./img/cabezabtn.png);
+    background-size: cover;
+    display: none;
+    height: 70px;
+    width: 70px;
+   cursor: pointer;
+
+}
+.btn_hambur_close {
+    background-image: url(./img/cabezabtnblack.png);
+    background-size: cover;
+    display: none;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+
+}
+
+
+
+.hamburguesa{
+    top: 90px;
+    height: 100vh;
+    display: none;
+    background: linear-gradient(rgba(14, 14, 15, 1), rgba(14, 14, 15, 0.9));
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+
+}
+
+.navbar_hambur{
+    display:flex;
+    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+    font-size: 3.5rem;
+    color: white;
+    width: 100vw;
+ 
+    
+}
+.navbar_hambur a {
+    
+        color: white;
+}
+/* ------------------------------------ */
 
 
 
@@ -720,7 +788,47 @@ height: 500px;
     align-items: center;
 }
 
+.navbar {
+    display: none;
+}
+.img_logo{
+    display: none;
+}
+
+.btn_hambur { 
+    display: flex ;
+}
+.btn_hambur_close {
+    display: flex;
+}
+.hamburguesa_open {
+    top: 90px;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(rgba(14, 14, 15, 1), rgba(14, 14, 15, 0.9));
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
 .info_item_shoop {
     display: flex;
     align-items: center;
 }}
+
+@media (max-width: 970px) {
+
+    .box__right {
+        min-width: 540px;
+    }
+    .footer {
+        background-color: #151515;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 2rem;
+      }
+      .logo_footer {
+        display: none;
+      }
+}

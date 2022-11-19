@@ -30,7 +30,11 @@ const remove = document.getElementById('item_show_sell_cart')
 const loginIn = document.getElementById('login_in')
 const loginOut = document.getElementById('login_out')
 const Shoopcart = document.getElementById('Shoopcart')
-
+const navbar = document.getElementById('navbar')
+const header = document.getElementById('hamburguesa')
+const btnHambur = document.getElementById('btnhambur')
+const btnSpider = document.getElementById('btn_spider')
+const btnBuy = document.querySelector('.btn_container_cart')
 
 
 
@@ -336,7 +340,7 @@ const renderItemShoop = (comic,price)=> {
             <span class= "margin">Format : ${comic.format}</span>
             <span class= "margin">Digital ID : ${comic.digitalId}</span>
             <span class= "margin">PRICE: USD ${price}</span>
-            <button class= "btn_buy_item" id = "btn_buy_item">BUY DIGITAL </button>
+            <button class= "btn_buy_item" id = "btn_buy_item"> BUY DIGITAL </button>
             </div>
         </div>
        
@@ -391,6 +395,7 @@ const test = (e) => {
             renderCarrito(totalCart,actualCart.price)
 
             saveCarrito(totalCart)
+            alert('Add to cart')
             counterCart.textContent= cantCart()
             priceTotal.textContent = `TOTAL: $ ${totalCartprice(totalCart)}`
               
@@ -407,7 +412,29 @@ const logout = () => {
 
 }
 
+const openMenu = ()=> {
+    header.classList.toggle('hamburguesa')
+    header.classList.toggle('hamburguesa_open')
+}
+const spiderHead = () => {
 
+    btnSpider.classList.toggle('btn_hambur_close')
+    btnSpider.classList.toggle('btn_hambur')
+}
+const confirmBuy = (e) => {
+    console.log(cantCartTotal)
+    if (cantCart() !== 0 ){
+        if (e.target.localName === "button") {
+            alert ('Compra realizada')
+            totalCart = [];
+            renderCarrito(totalCart,actualCart.price)
+            saveCarrito(totalCart)
+            cantCartTotal = 0
+            priceTotal.textContent = 0
+            counterCart.textContent= cantCart()
+    } } else {alert ('no hay elementos')}
+
+}
 
 const init = () => {
     if (totalCart.length === 0) {
@@ -423,6 +450,7 @@ const init = () => {
     btnnextSerie.addEventListener('click', searchnextSerie)
     btnantCharacter.addEventListener('click', searchantCharacter)
     sellCart.addEventListener('click',removeItem)
+    btnBuy.addEventListener('click',confirmBuy)
     btnSearchSerie.addEventListener('click',searchSerie )
     more.addEventListener('click', seeMore)
     cartBtn.addEventListener('click', toggleCart);
@@ -431,6 +459,8 @@ const init = () => {
     showItemShoop.addEventListener('click', test)
     btnantserie.addEventListener ('click', searchantSerie)
     loginOut.addEventListener('click', logout)
+    btnHambur.addEventListener('click',openMenu)
+    btnSpider.addEventListener('click',spiderHead)
    
   
 

@@ -1,29 +1,5 @@
 
-.navbar_container {
-    max-width: 1200px;
-    height: 100px;
-    margin: 0 auto;
-    z-index: 990;
-    display: flex;
-    padding: 0 30px 0 30px;
-    justify-content: space-between;
-    align-items: center;
-    
-}
 
-.navbar {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar_menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 55px;
-}
 
 .cart_container {
     display: flex;
@@ -477,13 +453,6 @@
 
 /*FOOTER*/
 
-.footer {
-    margin: 0 auto;
-    margin-top: 80px;
-    align-items: center;
-    gap: 50px
-}
-
 .footer_links {
     display: flex;
     gap: 15px;
@@ -505,30 +474,3 @@
     animation: girologo .2s linear;
 }
 
-/* .hidden{
-    display: none;
-} */
-
-@keyframes girologo {
-    from {
-        transform: rotateY(180deg);
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right {
-    from {
-        transform: translateX(100px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
